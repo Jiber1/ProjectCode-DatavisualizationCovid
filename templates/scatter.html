@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scatterplot</title>
+    </head>
+    <body>
+        <h1>Scatterplot</h1>
+        <img src='/static/plots/{{scatter}}' alt="scatterplot">
+    </body>
+</html>
+
+{% block title %}Choose another day and statistic{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    <p>Day (dd):</p>
+    <p><input type="text" name="day" /></p>
+    <p>Month (mm):</p>
+    <p><input type="text" name="month" /></p>
+    <p><label for="stat">Statistic (Confirmed or Deaths):</label></p>
+    <p><select name="stat" id="stat">
+    <option value="Confirmed">Confirmed</option>
+    <option value="Deaths">Deaths</option>
+    </select></p>
+    <p><input type="submit" value="submit" /></p>
+</form>
+{% endblock %}
+<form>
+    <input type="button" value="Go back to previous search" onclick="history.back()">
+</form>
